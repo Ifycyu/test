@@ -20,7 +20,7 @@ public class GameUnitTest {
     public void testAll20() // 10次都是2分
     {
         rollSame(1,20);
-        assertEquals(0,game.score());
+        assertEquals(20,game.score());
     }
     private void rollSame(int pins, int n) {
         for (int i = 0; i < n; i++) {
