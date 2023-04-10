@@ -57,7 +57,6 @@ public class GameUnitTest {
     {
         rollSame(10,12);
         assertEquals(300, game.score());
-        assertEquals(45, game.score());
     }
     private void rollSame(int pins, int n) //连续投掷一样的
     {
