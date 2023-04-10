@@ -51,6 +51,14 @@ public class GameUnitTest {
         rollSame(0,14);
         assertEquals(45, game.score());
     }
+
+    @Test
+    public void testAllStrike() // 9*(10+10+10)=270  +10+10+10=30
+    {
+        rollSame(10,12);
+        assertEquals(300, game.score());
+        assertEquals(45, game.score());
+    }
     private void rollSame(int pins, int n) //连续投掷一样的
     {
         for (int i = 0; i < n; i++) {
