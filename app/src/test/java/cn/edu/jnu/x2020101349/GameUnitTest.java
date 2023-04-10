@@ -34,6 +34,14 @@ public class GameUnitTest {
         rollSame(0,16);
         assertEquals(30, game.score());
     }
+    @Test
+    public void testOneSpare() //10+5 +5
+    {
+        rollSpare();
+        game.roll(5);
+        rollSame(0,17);
+        assertEquals(20, game.score());
+    }
 
     private void rollSame(int pins, int n) //连续投掷一样的
     {
@@ -41,6 +49,7 @@ public class GameUnitTest {
             game.roll(pins);
         }
     }
+
     private void rollSpare() //补中
     {
         game.roll(5);
