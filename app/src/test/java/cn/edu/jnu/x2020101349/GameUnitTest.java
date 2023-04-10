@@ -42,7 +42,15 @@ public class GameUnitTest {
         rollSame(0,17);
         assertEquals(20, game.score());
     }
-
+    @Test
+    public void testTwoStrike() // 10+10+5  +10+5+0  +5
+    {
+        rollStrike();
+        rollStrike();
+        game.roll(5);
+        rollSame(0,14);
+        assertEquals(20, game.score());
+    }
     private void rollSame(int pins, int n) //连续投掷一样的
     {
         for (int i = 0; i < n; i++) {
