@@ -26,7 +26,7 @@ public class GameUnitTest {
     }
 
     @Test
-    public void testOneStrike() // 10+5+5  +5+5
+    public void testOneStrike() // 10+5+5  +5+5 一次全中
     {
         rollStrike();
         game.roll(5);
@@ -35,7 +35,7 @@ public class GameUnitTest {
         assertEquals(30, game.score());
     }
     @Test
-    public void testOneSpare() //10+5 +5
+    public void testOneSpare() //10+5 +5 一次补中
     {
         rollSpare();
         game.roll(5);
